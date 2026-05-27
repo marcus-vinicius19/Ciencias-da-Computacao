@@ -1,0 +1,15 @@
+
+#include <stdio.h>
+void imprime (char var) {
+    int quant = 1;
+    for (int l=1; l<= 6; l++){
+        for (int c=1; c <= quant; c++) printf ("%c", var);
+        printf ("\n"); 
+        quant++;
+    }
+}
+
+int main() {
+    imprime('*');
+    return 0;
+}

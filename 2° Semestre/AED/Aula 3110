@@ -1,0 +1,82 @@
+#include <stdlib.h>
+
+void ciclo (int n, int limite){
+	printf("\n %d", n);
+	if(n < limite) ciclo(n+1, limite);
+}
+
+void magico(int n){
+	printf("\n %d", n);
+	if(n<5) magico (n+1);
+	printf("\n %d", n);
+}
+
+void misterio (int n){
+	if(n<5){
+		misterio(n+1);
+		printf("\n %d", n);
+		misterio(n+1);
+	}
+}
+
+int main(){
+	printf("CICLO (2,10)"); ciclo(2,10);
+	printf("\n\nMAGICO(2)"); magico(2);
+	printf("\n\nMISTERIO(2)"); misterio(2);
+	
+	system("pause");
+}
+
+======================================================================================================
+#include <stdio.h>
+#include <locale.h>
+
+void ciclo(int n, int limite){
+	for(n;n<=limite;n++){
+		printf("%d\n",n);
+	}
+} 
+
+int main(){
+	setlocale(LC_ALL,"Portuguese");
+	ciclo(2,10);
+}
+==================================================================================================
+
+#include <stdio.h>
+#include <locale.h>
+
+void ciclo(int n, int limite){
+		printf("%d\n",n);
+		if (n< limite){
+			ciclo(n+1,limite);
+		}
+		
+	}
+
+int main(){
+	setlocale(LC_ALL,"Portuguese");
+	ciclo(2,10);
+}
+
+===================================================================================================
+#include <stdio.h>
+
+int fatorial (int n)
+{
+    int fat;
+    if (n == 0) fat = 1;
+    else fat = n * fatorial (n - 1);
+    return fat;
+}
+====================================================================================================
+
+#include <stdio.h>
+
+int fatorial(int n)
+{
+    int fat = 1;
+    
+    for (int i = 1; i <= n; i++) fat = fat * i;
+    return fat;
+}

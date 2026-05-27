@@ -1,0 +1,67 @@
+
+#include <stdio.h>
+#define Tamanho 2
+
+  float calculamedia( float N1, float N2)
+{
+    float md;
+    md = (N1 + N2)/2;
+    return (md);
+}
+
+    float lerNotas()
+{
+    float rs;
+    printf("Insira o N1: ");
+    scanf ("%f", &rs);
+    while(rs < 0 || rs > 10){
+        printf("Insira um número entre 0 e 10: ");
+        scanf ("%f", &rs);
+    }
+    
+    return rs;
+}
+
+int main() {
+    
+    int f;
+    
+    struct estruturaAluno{
+             int matricula;
+             float N1;
+             float N2;
+             float media;
+    }; struct estruturaAluno aluno[Tamanho];
+    
+    // Entrada de DADOS
+    
+    
+        for(f=0; f<Tamanho; f++){
+       printf( "||||||||||||||||||||DADOS DO ALUNO||||||||||||||||||| \n\n");
+       printf( "Matrícula do aluno: ");
+       scanf ("%d" ,&aluno[f].matricula);
+       aluno[f].N1 = lerNotas();
+       aluno[f].N2 = lerNotas();
+        }
+       
+    // Processamento
+    
+         for(f=0; f<Tamanho; f++){
+        aluno[f].media = calculamedia(aluno[f].N1,aluno[f].N2);
+}
+    // Saída - Impressão do Boletim do Aluno
+    
+         for(f=0; f<Tamanho; f++){
+        printf( "\nBOLETIM DO ALUNO %d \n", aluno[f].matricula);
+        printf( "\nNota N1: %.1f", aluno[f].N1);
+        printf( "\nNota N2: %.1f", aluno[f].N2);
+        printf( "\nMedia..: %.1f", aluno[f].media);
+        }
+        
+       return (0);
+       
+      
+}
+
+
+
