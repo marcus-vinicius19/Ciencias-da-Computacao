@@ -1,0 +1,102 @@
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Console1609
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Aluno a1 = new Aluno("Zé", 121, "ze@gmail.com");
+            Aluno a2 = new Aluno("Ana", 234, "ana@xy.com");
+            Aluno a3 = new Aluno("Paulo", 738, "paulo@ig.com");
+
+            a1.setNome("Zé");
+            a2.setNome("Ana");
+            a3.setNome("Paulo");
+
+            a1.setMatricula(121);
+            a2.setMatricula(234);
+            a3.setMatricula(738);
+
+            a1.setEmail("ze@gmail.com");
+            a2.setEmail("ana@xy.com");
+            a3.setEmail("paulo@ig.com");
+
+
+
+            Console.WriteLine(a1.getNome() + " " + a1.getMatricula() + " " + a1.getEmail());
+            Console.WriteLine(a2.getNome() + " " + a2.getMatricula() + " " + a2.getEmail());
+            Console.WriteLine(a3.getNome() + " " + a3.getMatricula() + " " + a3.getEmail());
+
+
+            Console.ReadKey();
+        }
+    }
+}
+
+======================================================================
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Console1609
+{
+    public class Aluno
+    {
+        private String nome;
+        private int matricula;
+        private String email;
+
+        public Aluno(String nome, int matricula, String email)
+        {
+            this.nome = nome;
+            this.matricula = matricula;
+            this.email = email;
+        }
+
+   
+
+        public void setNome(String nome)
+        {
+            this.nome = nome;
+        }
+
+        public String getNome()
+        {
+            return (this.nome);
+        }
+
+        public void setMatricula(int matricula)
+        {
+            this.matricula = matricula;
+        }
+
+        public int getMatricula()
+        {
+            return (this.matricula);
+        }
+
+        public void setEmail(String email)
+        {
+            this.email = email;
+        }
+
+        public String getEmail()
+        {
+            return (this.email);
+        }
+
+
+    }
+}
+
+

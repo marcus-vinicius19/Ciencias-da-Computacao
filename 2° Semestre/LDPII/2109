@@ -1,0 +1,106 @@
+class Funcionario
+    {
+        private String nome;
+        private int matricula;
+        private double salario;
+    
+
+
+
+
+        public String getNome()
+        {
+            return this.nome;
+        }
+
+        public void setNome(String nome)
+        {
+            this.nome = nome;
+        }
+        public int getMatricula()
+        {
+            return this.matricula;
+        }
+
+        public void setMatricula(int matricula)
+        {
+            this.matricula = matricula;
+        }
+        public double getSalario()
+        {
+            return this.salario;
+        }
+
+        public void setSalario(double salario)
+        {
+            this.salario = salario;
+        }
+
+    }
+}
+
+================================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+
+
+
+        public static Funcionario[] f1 = new Funcionario[4];
+        static void Main(string[] args)
+        {
+
+            f1[0] = new Funcionario();
+            f1[0].setNome("Ana");
+            f1[0].setMatricula(123456);
+            f1[0].setSalario(4000.00);
+
+            f1[1] = new Funcionario();
+            f1[1].setNome("José");
+            f1[1].setMatricula(123455);
+            f1[1].setSalario(4000.00);
+
+            f1[2] = new Funcionario();
+            f1[2].setNome("Arnaldo");
+            f1[2].setMatricula(789987);
+            f1[2].setSalario(2000.00);
+
+            f1[3] = new Funcionario();
+            f1[3].setNome("Jonas");
+            f1[3].setMatricula(555555);
+            f1[3].setSalario(2000.00);
+            
+            
+            double soma = 0;
+            double aux = 0;
+            
+            for (int i = 0; i < f1.Length; i++)
+            {
+                aux = f1[i].getSalario();
+                soma = soma + aux;
+            }
+            double media = soma / f1.Length;
+
+
+            for (int i = 0; i < f1.Length; i++)
+            {
+                aux = f1[i].getSalario();
+                if (aux >= media) {
+
+                    Console.WriteLine("O funcionário" +" "+ f1[i].getNome() + "-"+ f1[i].getMatricula()+" " + "está acima da média");
+                }
+            }
+
+
+        } } }
+
+
