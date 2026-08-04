@@ -1,0 +1,257 @@
+ 
+1.
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+setlocale(LC_ALL,"Portuguese");
+
+    int tamPar, tamImpar, i, A[10], Par[10], Impar[10];
+    tamPar = 0;
+    tamImpar = 0;
+    
+	printf("\nDigite 10 números inteiros e maiores que zero: ");
+    for (i = 0; i < 10; i++) {
+        scanf("%d%", &A[i]);
+
+        if (A[i] % 2 == 0) {
+            Par[tamPar] = A[i];
+            tamPar++;
+        }
+        else {
+            Impar[tamImpar] = A[i];
+            tamImpar++;
+        }
+    }
+
+    printf("\n Números Pares:\n");
+    for (i = 0; i < tamPar; i++) {
+        printf("%d\n", Par[i]);
+    }
+
+    printf("\n Números Impares:\n");
+    for (i = 0; i < tamImpar; i++) {
+        printf("%d\n", Impar[i]);
+    }
+    
+    printf("\nNumeros entrados");
+	for(i=0; i<10;i++){
+	printf("\n%d", A[i]);
+}
+	return 0;
+}
+
+
+======================================================================
+
+
+
+#include<stdio.h>
+#include<locale.h>
+
+int main() {
+	setlocale(LC_ALL, "Portuguese");
+	
+	int i, A[10], soma=0;
+	
+	printf("Inicio de programa");
+	
+	printf("\nEntre com 10 números inteiros: \n");
+	
+	for (i=0; i<10; i++) 
+		scanf("%d", &A[i]);
+
+	for (i=0; i<10; i++){
+	if (A[i] % 2 == 0)
+	soma = soma + A[i]; }
+	
+	
+printf("A soma dos números pares entrados é: %d", soma);
+		
+	printf("\nFim do programa\n");
+	return 0;
+	
+}
+======================================================================
+
+ 
+#include<stdio.h>
+#include<locale.h>
+
+int main() {
+	setlocale(LC_ALL, "Portuguese");
+	
+	int i, A[10], soma=0,j, media;
+	
+	printf("Inicio de programa");
+	
+	printf("\nEntre com 10 números inteiros: \n");
+	
+	for (i=0; i<10; i++) 
+		scanf("%d", &A[i]);
+
+
+	for(i=0; i<10; i++){
+	if (A[i]%2 == 1)
+	soma = soma +A[i];
+	j++;
+}
+	media = soma/j;
+	
+printf("A média dos números ímpares entrados é: %d", media);
+		
+	printf("\nFim do programa\n");
+	return 0;
+	
+}
+======================================================================
+
+
+#include<stdio.h>
+#include<locale.h>
+
+int main() {
+	setlocale(LC_ALL, "Portuguese");
+	
+	int i, A[10], media, maior=0, menor;
+
+	printf("Inicio de programa");
+	
+	printf("\nEntre com 10 números inteiros: \n");
+	
+	for (i=0; i<10; i++){
+		scanf("%d", &A[i]);}
+		
+	menor = A[0];
+
+	for (i=0; i<10; i++){
+	if (A[i]>=maior)
+	maior = A[i]; }
+	
+	for (i=0; i<10; i++){
+	if (A[i]<= menor)
+	menor = A[i]; }
+	
+	media = (maior+menor)/2;
+	
+printf("A média do maior e menor números entrados é: %d\n", media);		
+	printf("\nFim do programa\n");
+	return 0;
+	
+}
+
+
+
+
+
+======================================================================
+5.
+
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+
+setlocale(LC_ALL,"Portuguese");
+	int A[10],i,B[10],j,k=0;
+
+	printf("Insira os números inteiros e maiores que 0\n");
+	for (i=0; i<10; i++) {
+		scanf("%d", &A[i]);
+}
+	printf("Insira os números inteiros e maiores que 0\n");
+	for (i=0; i<10; i++) {
+		scanf("%d", &B[i]);}
+	
+	for(i=0; i<10; i++){
+		for(j=0; j<10; j++){
+			if(A[i]== B[j])
+			k++;
+}
+}
+	int C[k];
+	k=0;
+		for(i=0; i<10; i++){
+			for(j=0; j<10; j++){
+			if(A[i]== B[j]){
+			C[k]= A[i];
+			k++;
+}
+}
+}
+		printf("Os números presentes nos dois arrays são: ");
+		for(i=0; i<k; i++)
+		printf("%d", C[i]);
+	
+	return 0;
+}
+
+
+
+
+
+
+
+======================================================================
+6.
+
+
+
+
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+
+setlocale(LC_ALL,"Portuguese");
+	int A[10],i,B[10],j,k=0;
+
+	printf("Insira os números inteiros e maiores que 0\n");
+	for (i=0; i<10; i++) {
+		scanf("%d", &A[i]);
+}
+	printf("Insira os números inteiros e maiores que 0\n");
+	for (i=0; i<10; i++) {
+		scanf("%d", &B[i]);}
+	
+	for(i=0; i<10; i++){
+		for(j=0; j<10; j++){
+			if(A[i]!= B[j])
+			k++;
+}
+}
+
+	
+	for(i=0; i<10; i++){
+		for(j=0; j<10; j++){
+			if(B[j]!= A[i])
+			k++;
+}
+}
+	int C[k];
+	k=0;
+		for(i=0; i<10; i++){
+			for(j=0; j<10; j++){
+			if(B[i]!= A[j]){
+			C[k]= B[i];
+			k++;
+			
+}
+}
+}
+		for(i=0; i<10; i++){
+			for(j=0; j<10; j++){
+			if(A[i]!= B[j]){
+			C[k]= A[i];
+			k++;
+			
+}
+}
+}
+	for(i=0; i<k; i++)
+	printf("%d", C[i]);
+	return 0;
+	}
+
+
+======================================================================
