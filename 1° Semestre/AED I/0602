@@ -1,0 +1,150 @@
+package aula0602;
+
+public class Main {
+
+public static void main(String[] args)
+
+{
+
+aluno x = new aluno("Paulo", 55123, "800912345", 'M', 7.0, 6.0, 9.0);
+
+aluno y = new aluno("Ana", 991239, "500876123-12", 'F', 2.0, 6.0, 9.0);
+
+x.imprime_Aluno();
+
+x.imprime_Sexo();
+
+x.media_Aluno();
+
+x.resultado();
+
+y.imprime_Aluno();
+
+y.imprime_Sexo();
+
+y.media_Aluno();
+
+y.resultado();
+
+}
+
+
+}
+
+====================================================================
+
+package aula0602;
+
+public class aluno {
+
+String nome;
+
+int codmat;
+
+String cpf;
+
+char sexo;
+
+double nota_P1;
+
+double nota_P2;
+
+double nota_P3;
+
+double media = 0;
+
+
+double maior1;
+
+double maior2;
+
+
+public aluno(String nome, int codmat, String cpf, char sexo, double nota_P1, double nota_P2, double nota_P3) {
+
+this.nome = nome;
+
+this.codmat = codmat;
+
+this.cpf = cpf;
+
+this.sexo = sexo;
+
+this.nota_P1 = nota_P1;
+
+this.nota_P2 = nota_P2;
+
+this.nota_P3 = nota_P3;
+
+}
+
+
+public void imprime_Aluno() {
+
+System.out.println(this.nome);
+
+System.out.println(this.codmat);
+
+System.out.println(this.cpf);
+
+System.out.println(this.sexo);
+
+}
+
+
+public void imprime_Sexo() {
+
+System.out.println(this.nome);
+
+if(sexo == 'M') {
+
+System.out.println("Masculino");
+
+}else if (sexo == 'F'){
+
+System.out.println("Feminino");
+
+}
+
+}
+
+
+public double media_Aluno() {
+
+
+maior1 = nota_P1;
+
+maior2 = nota_P2;
+
+
+if(nota_P3 > nota_P1) maior1 = nota_P3;
+
+else if (nota_P3 > nota_P2) maior2 = nota_P3;
+
+
+if(nota_P1 > maior2) maior2 = nota_P1;
+
+
+media = ((maior1 + maior2) / 2);
+
+
+return media;
+
+
+}
+
+
+public void resultado() {
+
+if(media >= 6) {
+
+System.out.println("Aprovado");
+
+}else {
+
+System.out.println("Reprovado");
+
+}
+
+}
+
+}
