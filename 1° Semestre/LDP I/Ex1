@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="_css/main.css"/>
+<meta charset="UTF-8"/>
+<title>Linguagem de Programação 1</title>
+<h1>Linguagem de Programação 1</h1>
+</head>
+<body>
+<?php
+$a=$_GET["i"];
+//echo "$a";
+for($i=$a;$i<=100;$i++){
+echo "$i. ";
+}
+echo "<p> 8123392 - Marcus Vinicius de Souza Michieleto </p>";
+?>
+</body>
+</html>
