@@ -1,0 +1,10 @@
+<?php
+
+$n1 = $_GET["nota1"];
+$n2 = $_GET["nota2"];
+$atividade = $_GET["atividade"];
+
+if($n1+$n2+$atividade<12){
+  echo "Aprovado";
+}
+?>
