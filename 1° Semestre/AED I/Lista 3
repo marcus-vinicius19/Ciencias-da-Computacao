@@ -1,0 +1,372 @@
+ 1.
+#include<stdio.h>
+#include<locale.h>
+int main() {
+	setlocale(LC_ALL, "Portuguese");	
+	int i, A[10], j=0, soma=0, media;
+	printf("Inicio de programa");
+	printf("\nEntre com 10 números: \n");
+	for (i=0; i<10; i++) {
+		scanf("%d", &A[i]);
+}
+
+	printf("Os valores negativos entrados foram: ");
+	for (i=0; i<10; i++){
+		if (A[i]<0)
+	 printf("%d\n", A[i]);
+}	 
+	 
+	for (i=0; i<10; i++){
+		if (A[i]<0){
+			soma = soma + A[i];
+			j++;
+}
+}
+	media = soma/j;
+	printf("A média dos valores negativos é: %d", media);
+	printf("\nFim do programa\n");
+	return 0;	
+}
+======================================================================
+
+2.
+#include<stdio.h>
+#include<locale.h>
+
+int main() {
+	setlocale(LC_ALL, "Portuguese");
+	
+	int clientes=150,pagamento[3],ValorC=0,ValorCC=0,ValorCe=0, i=0;		
+	double valor[3], cheque=0, cartao=0, cedulas=0, total=0;
+//cheque é o pagamento 1, cartão o pagamento 2 e cédulas o pagamento 3;
+
+	for(i=0; i<clientes; i++){
+		printf("Entre com o tipo de pagamento: \n");
+		scanf("%d", &pagamento[i]); 
+		printf("Entre com o valor pago: \n");
+		scanf("%lf", &valor[i]);
+}
+		
+   for (i=0;i<clientes; i++)
+	 switch(pagamento[i]){
+	 	case 1:
+	 		ValorC++;
+	 		cheque += valor[i];
+	 		break;
+	 	case 2:
+	 		ValorCC++;
+	 		cartao += valor[i];
+	 		break;
+	 	default:
+	 		ValorCe++;
+	 		cedulas += valor[i];
+	 		break;	 
+	 }
+	 
+	 total = cedulas+cartao+cheque;
+	 
+		printf("O valor obtido em cédulas foi de: R$%lf\n", cedulas);
+		printf("O valor obtido em cartão foi de: R$%lf\n", cartao);
+		printf("O valor obtido em cheque foi de: R$%lf\n", cheque);
+ 		printf("O valor total obtido foi de: R$%lf\n", total);
+	
+	return 0;
+}
+
+
+
+====================================================================
+
+
+
+3.
+
+#include<stdio.h>
+#include<locale.h>
+int main() {
+	setlocale(LC_ALL, "Portuguese");
+	int e=0, voto1=0, voto2=0, branco=0, nulo=0, i=0;
+	printf("Entre com o número de eleitores: ");
+	scanf("%d", &e);
+	 
+	 int votos[e]; 
+	 
+	printf("Insira os votos dos eleitores: ");
+	for(i=0; i<e; i++){
+	scanf("%d", &votos[i]);
+	if(votos[i]==1){
+		voto1++;
+	}else if(votos[i]==2){
+		voto2++;
+	}else if(votos[i]==3){
+		branco++;
+	}else nulo++;	
+}
+	if(voto1>=voto2){
+	printf("O vencedor foi o candidato 1\n");
+	}else{ printf("O vencedor foi o candidato 2\n");
+	}	
+printf("A quantidade de votos para o candidato 1 é de: %d\n", voto1);
+printf("A quantidade de votos para o candidato 2 é de: %d\n", voto2);
+printf("A quantidade de votos brancos é de: %d\n", branco);
+printf("A quantidade de votos nulos é de: %d\n", nulo);
+printf("A quantidade total de eleitores é de %d\n", e);
+	return 0;
+}
+	
+
+================================================================
+4.
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+	setlocale(LC_ALL,"Portuguese");
+	int array[5], array2[5],  i,  mediaI=0,  mediaIH=0, c1=0,c2=0;
+	double array3[5],mediahm=0.0,c3=0;
+	
+	for(i=0;i<5;i++){
+		printf("\nInsira qual o seu sexo(0-feminimo, 1-masculino): ");
+		scanf("\n%d", &array[i]);
+		printf("\nAgora insira a sua idade: ");
+		scanf("\n%d",&array2[i]);
+		printf("\nAgora insira a sua altura: ");
+		scanf("%lf", &array3[i]);
+		
+		mediaI+=array2[i];
+		if(array[i]==0){
+			mediahm=mediahm+array3[i];
+			c1++;
+		}else{
+			mediaIH+=array2[i];
+			c2++;
+		}
+		if(array2[i]>=18 && array2[i]<=35){
+			c3++;
+		}
+	}
+	mediaI/=5;
+	mediahm=mediahm/c1;
+	mediaIH/=c2;
+	c3=(c3/5)*100;
+	
+	
+	printf("\nA média das idades é: %d",mediaI);
+	printf("\nA média das alturas das mulheres é: %lf",mediahm);
+	printf("\nA média das idades dos homens é: %d",mediaIH);
+	printf("\nO percentual das idades entre 18 e 35 anos é: %.2lf%",c3);
+}
+======================================================================
+
+
+
+
+
+
+5.
+#include<stdio.h>
+#include<locale.h>
+
+int main() {
+	setlocale(LC_ALL, "Portuguese");
+	
+	int i,A[10], B[10];
+	
+	printf("Inicio de programa");
+	
+	printf("\nEntre com 10 números: \n");
+	
+	for (i=0; i<10; i++){
+		scanf("%d", &A[i]);
+}
+	for (i=0; i<10; i++) {
+	B[i] = A[i]*A[i];
+}
+	printf("O quadrado dos números entrados vale:");
+	for (i=0; i<10; i++) {
+	printf("%d: %d\n", A[i], B[i]);
+}
+	return 0;
+
+	
+	
+}
+
+
+
+
+======================================================================
+6.
+
+#include<stdio.h>
+#include<locale.h>
+
+int main() {
+	setlocale(LC_ALL, "Portuguese");
+	
+	int i, A[8], Y, X, soma;
+	
+	printf("Inicio de programa");
+	
+	printf("\nEntre com 10 números: \n");
+	
+	for (i=0; i<8; i++) 
+		scanf("%d", &A[i]);
+
+	printf("Entre com os valores de X e Y entre 0 e 7:");		
+	scanf("%d", &X);
+	scanf("%d", &Y);
+ 	
+ 	soma = A[X] + A[Y];
+ 	printf("Soma de X(%d) e Y(%d) é  igual a %d ", X, Y, soma);
+	
+	printf("\nFim do programa\n");
+	return 0;
+	
+}
+
+======================================================================
+
+
+
+
+
+
+
+7.
+#include<stdio.h>
+#include<locale.h>
+
+int main() {
+	setlocale(LC_ALL, "Portuguese");
+	
+	int i, A[6];
+	
+	printf("Inicio de programa");
+	
+	printf("\nEntre com 10 números: \n");
+	
+	for (i=0; i<6; i++) 
+		scanf("%d", &A[i]);
+
+	printf("Os números entrados foram:\n");
+	for (i=5; i>=0; i--){
+	printf("%d\n", A[i]);
+}
+	printf("\nFim do programa\n");
+	return 0;
+	
+}
+
+
+
+======================================================================
+
+8.
+
+#include<stdio.h>
+#include<locale.h>
+
+int main() {
+	setlocale(LC_ALL, "Portuguese");
+	
+	int i, A[15], soma=0, media;
+	
+	printf("Inicio de programa");
+	
+	printf("\nEntre com 10 números: \n");
+	
+	for (i=0; i<15; i++){
+		scanf("%d", &A[i]);
+}		
+	for (i=0; i<15; i++)
+		soma = soma + A[i];
+
+	media = soma/15;
+	
+	printf("A média geral da turma é: %d", media);
+	printf("\nFim do programa\n");
+	return 0;
+	
+}
+
+
+
+======================================================================
+9.
+
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+	setlocale(LC_ALL,"Portuguese");
+	int i,array[10], i2, j=0;
+	for(i=0;i<10;i++){
+		printf("Insira o %dº número: ",i+1);
+		scanf("\n%d",&array[i]);
+		}
+	for(i=0;i<10;i++){
+		for(i2=0;i2<10;i2++){
+			if(array[i]==array[i2]){
+				j++;
+			}
+		}
+	}
+	int array2[j];
+	j=0;
+	for(i=0;i<10;i++){
+		for(i2=0;i2<10;i2++){
+			if(array[i]==array[i2]){
+				array2[j]=array[i];
+				j++;
+			}
+		}
+	}
+	for(i=0;i<j;i++){
+		printf("\n%d",array2[i]);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+======================================================================
+
+10.
+#include<stdio.h>
+#include<locale.h>
+
+int main() {
+	setlocale(LC_ALL, "Portuguese");
+	
+	int i, A[10];
+	
+	printf("Inicio de programa");
+	
+	printf("\nEntre com 10 números: \n");
+	
+	for (i=0; i<10; i++) 
+		scanf("%d", &A[i]);
+
+	for (i=0; i<10; i++){
+	if (A[i] <= 0)
+	 A[i] = 0; }
+	
+	printf("Os números entrados foram:\n");
+	for (i=0; i<10; i++){
+	printf("%d\n", A[i]);
+}
+	printf("\nFim do programa\n");
+	return 0;
+	
+}
+======================================================================
