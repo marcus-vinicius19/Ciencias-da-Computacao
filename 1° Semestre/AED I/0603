@@ -1,0 +1,125 @@
+package aaaaa;
+
+public class Node {
+
+int item;
+
+Node next;
+
+public Node() {
+
+this.item = 0;
+
+this.next = null;
+
+}
+
+public Node(int item) {
+
+this.item = item;
+
+this.next = null;
+
+
+}
+
+public void imprimeLista() {
+
+
+
+Node next = this;
+
+
+while(next != null)
+
+{
+
+System.out.println(next.item);
+
+next = next.next;
+
+}
+
+System.out.println("");
+
+
+}
+
+public void InsertItem(int item)
+
+{
+
+Node no_trab = new Node();
+
+no_trab.item = item;
+
+no_trab.next = this.next ;
+
+this.next = no_trab;
+
+}
+
+
+public void Deleta_Proximo_Item() {
+
+this.next = this.next.next;
+
+}
+
+
+public void Altera_Item(int item) {
+
+this.item = item;
+
+}
+
+
+}
+
+==================================================================================================
+
+package aaaaa;
+
+public class Main {
+
+public static void main(String[] args) {
+
+Node N1;
+
+N1 = new Node();
+
+N1.item = 8;
+
+
+Node N2;
+
+N2 = new Node();
+
+N2.item = 5;
+
+Node N3;
+
+N3 = new Node();
+
+N3.item = 9;
+
+
+N1.next = N2;
+
+N2.next = N3;
+
+N3.next = null;
+
+N1.imprimeLista();
+
+N1.Deleta_Proximo_Item();
+
+N1.imprimeLista();
+
+N3.InsertItem(7);
+
+N1.imprimeLista();
+
+}
+
+}
