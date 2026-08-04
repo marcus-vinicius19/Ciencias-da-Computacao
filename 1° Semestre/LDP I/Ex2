@@ -1,0 +1,10 @@
+<?php
+$s = $_GET["n1"];
+$a = $_GET["n2"];
+if($s>$a){
+      echo "O maior número é: $s";
+    }else if($s<$a){
+      echo "O maior número é: $a";
+    }
+echo "<p> 8123392 - Marcus Vinicius de Souza Michieleto </p>"
+?>
