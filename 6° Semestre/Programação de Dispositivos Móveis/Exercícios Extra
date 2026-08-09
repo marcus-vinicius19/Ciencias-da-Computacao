@@ -1,0 +1,100 @@
+1)
+def verificarParOuImpar(x:Int): String =
+  if (x % 2 == 0){
+  return "Par";
+  }
+  else{
+  return "Imp ar";
+  }
+
+print(verificarParOuImpar(2))
+
+2)
+
+def classificarIdade(x:Int): String = x match{
+  case x if x<=12 => return "Criança";
+  case x if (x>=13) && x<=17 =>  return "Adolescente" ;
+  case x if(x>=18)&& x<64 => return"Adulto";
+  case x if(x>64) => return "Idoso";
+}
+println (classificarIdade(2))
+println (classificarIdade(65))
+
+3) 
+def descriçãoDia(x:Int): String = x match{
+  case 1 => return "Segunda-feira"
+  case 2 => return "Terça-feira"
+  case 3 => return "Quarta-feira"
+  case 4 => return "Quinta-feira"
+  case 5 => return "Sexta-feira"
+  case 6 => return "Sabado"
+  case 7 => return "Domingo"
+  case _ => return "Dia Invalido"
+}
+println (descriçãoDia(1))
+println (descriçãoDia(8))
+
+4)
+
+def calculadora(x:String, y:Int, z:Int): String = x match{
+  case x if (x=="+") => return (y+z).toString
+  case x if (x=="-")  => return (y-z).toString
+  case x if (x=="/")  => return(y/z).toString
+  case x if (x=="*")  => return (y*z).toString
+  case _ => return "Operação Inválida"
+}
+println(calculadora("+", 1,1))
+
+
+
+
+5)
+def verificaNumero(x:Int): String ={
+ if (x>0){
+ return "Positivo"
+ } else if (x==0){
+ return "Zero"
+ } else{
+ return "Negativo"
+ }
+}
+println(verificaNumero(-1))
+
+6)
+
+def classificarTemperatura (x:Int): String = x match {
+  case x if(x<=10) => return "Frio";
+  case x if(x>=11) && (x<=25) => return "Ameno";
+  case x if(x>=25)=> return "Quente";
+ }
+println(classificarTemperatura(24))
+
+
+7)
+
+def quadrante (x:Int): String = x match {
+  case x if(x>=0) && (x<=90) => return "Quadrante I";
+  case x if(x>=91) && (x<=180) => return "Quadrante II";
+  case x if(x>=181) && (x<=270) => return "Quadrante III";
+  case x if(x>=271) && (x<=360) => return "Quadrante IV";
+  case _ => return "Quadrante Inválido";
+ }
+println(quadrante(425))
+
+8)
+
+def ehPrimo (x:Int): String = {
+ if (x <= 1){
+   return "Não é primo"
+} else {
+  for (i <- 2 to x-1){
+    if (x % i == 0)
+    {
+    return "Não primo"
+    }
+  }
+  return "Primo"
+}
+}
+println(ehPrimo(7))
+
