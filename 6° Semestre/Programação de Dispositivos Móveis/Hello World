@@ -1,0 +1,4 @@
+fun main() {
+    val A = "Marcus Vinicius de Souza Michieleto - 8123392"
+    println("Hello $A")
+}
