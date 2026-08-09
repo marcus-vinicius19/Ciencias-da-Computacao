@@ -1,0 +1,33 @@
+class Produto(var  nome: String, var quantidade: Int, var preco: Double) {
+  
+    fun adicionar(quantidade: Int): Boolean {
+        return if (quantidade > 0) {
+            this.quantidade += quantidade
+            true
+        } else {
+            false
+        }
+    }
+
+    fun remover(quantidade: Int): Boolean {
+        return if (quantidade > 0 && quantidade <= this.quantidade) {
+            this.quantidade -= quantidade
+            true
+        } else {
+            false
+        }
+    }
+
+    fun imprimir() {
+        println("Nome: $nome Quantidade: $quantidade Preço: R$ $preco")
+    }
+}
+
+fun main() {
+    val Arroz = Produto("Arroz", 50, 5.50)
+
+    Arroz.adicionar(20);
+    Arroz.remover(10);
+    Arroz.imprimir();
+}
+
