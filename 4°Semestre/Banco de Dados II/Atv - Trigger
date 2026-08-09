@@ -1,0 +1,42 @@
+11.
+CREATE TRIGGER Dependente_10
+AFTER INSERT ON dependente
+FOR EACH ROW
+AS
+BEGIN
+    UPDATE Empregados SET salario = salario * 1,1
+Where dependente.cod_empregado = Empregados.cod_empregado
+END
+
+
+12.
+CREATE TRIGGER XCLD	
+AFTER DELETE ON Dependente
+AS
+BEGIN
+    UPDATE Empregados SET salario = salario - (salario*0,1)
+Where dependente.cod_empregado = Empregados.cod_empregado
+END
+
+13.
+CREATE TRIGGER Not_Depto
+INSTEAD OF DELETE ON Depto
+AS
+BEGIN
+  DECLARE @NOME VARCHAR(50)
+    SELECT @NOME=NOME FROM DELETED
+SELECT 'NÃO É POSSÍVEL DELETAR’ + @NOME
+END
+
+
+
+14.
+CREATE TRIGGER Aumenta_50
+AFTER INSERT ON dependente
+FOR EACH ROW
+AS
+BEGIN
+    UPDATE Empregados SET salario = salario * 1,5
+Where dependente.cod_empregado = Empregados.cod_empregado
+END
+
