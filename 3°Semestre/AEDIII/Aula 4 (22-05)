@@ -1,0 +1,69 @@
+1.
+import java.util.Stack;
+
+public class verificaParenteses {
+
+  public static boolean verifica(String expressao) {
+    Stack<Character> pilha = new Stack<Character>();
+
+    for (int i = 0; i < expressao.length(); i++) {
+      char caractere = expressao.charAt(i);
+    
+    if (caractere == '(' || caractere == '[' || caractere == '{') {
+      pilha.push(caractere);
+    
+    } else if (caractere == ')' || caractere == ']' || caractere == '}') {
+      if (pilha.isEmpty()) {
+        return false;
+      } else if (caractere == ')' && pilha.peek() == '(' ||
+        caractere == ']' && pilha.peek() == '[' ||
+        caractere == '}' && pilha.peek() == '{') {
+      pilha.pop();
+      } else {
+        return false;
+      }
+    }
+  }
+  return pilha.isEmpty();
+}
+public static void main(String[] args) {
+  String expressao1 = "((())[()])";
+  String expressao2 = "([)]";
+  String expressao3 = "({}[()])";
+
+  System.out.println(verifica(expressao1)); // true
+  System.out.println(verifica(expressao2)); // false
+  System.out.println(verifica(expressao3)); // true
+}
+}
+
+2.
+import java.util.*;
+
+public class Palindromo {
+
+  public static boolean palindromo(String palavra) {
+  Stack<Character> pilha = new Stack<Character>();
+  for (int i = 0; i < palavra.length(); i++) {
+    pilha.push(palavra.charAt(i));
+  }
+  String palavraInvertida = "";
+  while (!pilha.empty()) {
+    palavraInvertida += pilha.pop();
+  }
+  return palavra.equals(palavraInvertida);
+}
+
+  public static void main(String[] args) {
+    String palavra = "arara";
+    System.out.println(palindromo(palavra)); // true
+
+    palavra = "rairar";
+    System.out.println(palindromo(palavra)); // true
+    palavra = "hanah"
+    System.out.println(palindromo(palavra)); // true
+
+    palavra = "palavra";
+    System.out.println(palindromo(palavra)); // false
+}
+}
