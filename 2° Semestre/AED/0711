@@ -1,0 +1,91 @@
+1. 
+
+#include <stdio.h>
+
+int fib (int n) {
+   int aux1 = 0;
+   int aux2 = 1;
+   int retorno=0;
+ 
+   
+for (int i = 2; i <= n; i++){
+   
+   retorno = aux1 + aux2 ;
+   aux1 = aux2;
+   aux2 = retorno;
+   
+   
+}
+return retorno;
+
+
+}
+
+
+int main()
+{
+    int n, aux;
+   
+    printf("Digite o valor de n: ");
+    scanf ("%d", &n);
+   
+     aux = fib(n);
+   
+    printf ("\n\nO valor retornado é %d", aux);
+
+    return 0;
+   
+}
+
+=========================================================================================
+2.
+
+int fib (int n) {
+   
+    printf("\nDentro da função fib n=%d", n);
+
+   if(n == 0)  return 0;
+   
+    if(n == 1)  return 1;
+       
+    if(n > 1)  return fib(n-1) + fib(n-2);
+
+}
+
+int main()
+{
+    int n, aux;
+   
+    printf("Digite o valor de n: ");
+    scanf ("%d", &n);
+   
+     aux = fib(n);
+   
+    printf ("\n\nO valor retornado é %d", aux);
+
+    return 0;
+   
+}
+=========================================================================================
+3.
+
+#include <stdio.h>
+
+int recursao (int n){
+    printf ("\nEstou na função e n=%d", n);
+    if (n<=10) return n*2;
+    else recursao (recursao(n/3));
+}
+int main()
+{
+    printf("Recursividade \n");
+    int aux;
+   
+    aux = recursao (27);
+   
+    printf ("\n\nValor Calculado=%d", aux);
+
+    return 0;
+}
+
+
