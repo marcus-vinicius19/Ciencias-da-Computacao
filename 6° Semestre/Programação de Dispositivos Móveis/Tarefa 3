@@ -1,0 +1,245 @@
+1.
+
+fun saudacao(nome: String?, idade: Int? ): String {
+    if(idade in 18..65){
+        return ("Olá, " + nome + " ! " + "Você tem " + idade + " anos!" + " Você pode doar sangue")
+    }
+    else{
+        return ("Olá, " + nome + " ! " + "Você tem " + idade + " anos!" + " Você não pode doar sangue")
+    }
+   
+}
+
+fun main(){
+    val nome: String?
+    val idade: Int?
+
+    println("Entre com o seu nome: ")
+    nome = readLine()
+
+    println("Entre com sua idade: ")
+    idade = readLine()?.toIntOrNull()
+
+    val retorno = saudacao(nome, idade)
+    println (retorno)
+
+}
+
+2.
+
+fun sayHello() {
+    println("Hello, World!")
+   
+}
+
+fun main(){
+    sayHello()
+}
+
+
+
+
+
+
+
+
+
+3.
+fun soma2Numeros(a: Int?, b: Int?): Int {
+    if (a == null || b == null) {
+        println("Um dos valores é nulo.")
+        return 0
+    }
+    return a + b
+}
+
+fun main() {
+    println("Entre com o primeiro número: ")
+    val a = readLine()?.toIntOrNull()
+
+    println("Entre com o segundo número: ")
+    val b = readLine()?.toIntOrNull()
+
+    val retorno = soma2Numeros(a, b)
+    println("A soma é: $retorno")
+}
+
+
+4.
+fun verificaParidade(a: Int?): String {
+     if (a == null) {
+        return ("Esse número é nulo")
+        }
+   else if (a % 2 == 0) {
+       return ("Esse número é par.")
+    }
+    else{
+        return ("Esse número é impar.")
+    }
+}
+
+fun main() {
+    println("Entre com o número: ")
+    val a = readLine()?.toIntOrNull()
+
+    val retorno = verificaParidade(a)
+    println(retorno)
+}
+
+
+
+
+
+
+
+5.
+fun concatenaStrings(a: String?, b: String?): String {
+   if (a == null || b == null) {
+       return ("Não é possível concatenar")
+    }
+    return a.plus(b)
+    }
+
+fun main() {
+    println("Entre com a primeira String: ")
+    val a = readLine()
+    
+    println("Entre com a segunda String: ")
+    val b = readLine()
+
+    val Strings = concatenaStrings(a,b)
+    println("A string concatenada é" + Strings )
+}
+
+6.
+
+fun INDICEMC(peso: Double?, altura: Double?): Double {
+    // Verifica se peso e altura não são nulos
+    if (peso == null || altura == null) {
+        println("Peso ou altura inválidos.")
+        return 0.0
+    }
+    return peso / (altura * altura)
+}
+
+fun main() {
+    println("Entre com o peso (kg): ")
+    val peso = readLine()?.toDoubleOrNull()
+    println(peso)
+    
+    println("Entre com a altura (m): ")
+    val altura = readLine()?.toDoubleOrNull()
+    println(altura)
+    
+    val imc = INDICEMC(peso, altura)
+
+    // Verifica se o IMC é válido (diferente de 0.0)
+    if (imc != 0.0) {
+        println("Seu Índice de Massa Corporal é: %.2f".format(imc))
+    } else {
+        println("Não foi possível calcular o IMC. Verifique os valores inseridos.")
+    }
+}
+
+7.
+fun verificaMaioridade(a: Int?): String {
+     if (a == null) {
+        return ("Esse número é nulo")
+        }
+   else if (a >= 18) {
+       return ("Você é maior de idade")
+    }
+    else{
+        return ("Você não é maior de idade")
+    }
+}
+
+fun main() {
+    println("Entre sua idade: ")
+    val a = readLine()?.toIntOrNull()
+
+    val retorno = verificaMaioridade(a)
+    println(retorno)
+}
+
+
+8.
+
+fun listaQuadrados(n: Int) {
+    for (i in 1..n) {
+        println("O quadrado de $i é: ${i * i}")
+    }
+}
+
+fun main() {
+    println("Entre com um número inteiro positivo: ")
+    val n = readLine()?.toIntOrNull()
+
+    if (n != null && n > 0) {
+        listaQuadrados(n)
+    } else {
+        println("Entrada inválida! Por favor, insira um número inteiro positivo.")
+    }
+}
+
+
+
+
+
+
+
+9.
+fun fibonacci(n: Int): Int {
+    if (n == 0) return 0
+    if (n == 1) return 1 
+    
+    var a = 0
+    var b = 1
+    var resultado = 1
+
+    for (i in 2..n) {
+        resultado = a + b
+        a = b
+        b = resultado
+    }
+
+    return resultado
+}
+
+fun main() {
+    println("Entre com um número inteiro positivo: ")
+    val n = readLine()?.toIntOrNull()
+
+      if (n != null && n >= 0) {
+        val fib = fibonacci(n)
+        println("O valor de Fibonacci para $n é: $fib")
+    } else {
+        println("Entrada inválida! Por favor, insira um número inteiro positivo.")
+    }
+}
+
+
+10.
+
+fun fatorial(n: Int): Int{
+    var resultado: Int = 1
+    for (i in 1..n) {
+        resultado *= i
+    }
+
+    return resultado
+}
+
+fun main() {
+    println("Entre com um número inteiro positivo: ")
+    val n = readLine()?.toIntOrNull()
+
+    if (n != null && n >= 0) {
+        val fat = fatorial(n)
+        println("O fatorial de $n é: $fat")
+    } else {
+        println("Entrada inválida! Por favor, insira um número inteiro positivo.")
+    }
+}
+
+
