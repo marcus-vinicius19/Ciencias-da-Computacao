@@ -1,1 +1,84 @@
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aula7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Departamento DepVendas = new Departamento("Vendas");
+            Funcionario fun1 = new Funcionario("maria", 123, "67656567");
+            Funcionario fun2 = new Funcionario("pedro", 789, "2213438");
+
+            DepVendas.AdicionaFuncionario(fun1);
+            DepVendas.AdicionaFuncionario(fun2);
+            DepVendas.ImprimeDepartamento();
+        }
+    }
+}
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aula7
+{
+    class Departamento
+    {
+        string nome;
+        ArrayList listaDeFuncionarios = new ArrayList();
+
+        public void AdicionaFuncionario(Funcionario f) => listaDeFuncionarios.Add(f);
+
+        public void ImprimeDepartamento()
+        {
+            foreach (Funcionario f in listaDeFuncionarios) f.ImprimeFuncionario();
+        } 
+
+        public Departamento(string nome)=> this.nome = nome;
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aula7
+{
+    class Funcionario
+    {
+        string nome;
+        int matricula;
+        string cpf;
+
+        public string GetNome() { return nome; }
+        public int GetMatricula() { return matricula; }
+        public string GetCPF() { return cpf; }
+
+        public string SetNome(string nome) { this.nome = nome; }
+        public int SetMatricula(int matricula) { this.matricula = matricula; }
+        public string SetCPF(string cpf) { this.cpf = nome; }
+
+
+        public void ImprimeFuncionario() => Console.WriteLine(nome + " " + matricula + " " + cpf );
+
+        public Funcionario(string nome, int matricula, string cpf)
+        {
+            Nome = nome;
+            Matricula = matricula;
+            Cpf = cpf;
+        }
+    }
+}
+
+
