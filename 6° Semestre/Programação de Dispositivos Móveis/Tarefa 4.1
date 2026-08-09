@@ -1,0 +1,34 @@
+class ContaBancaria(var  titular: String, var saldo: Double) {
+
+    fun depositar(valor: Double) {
+        if (valor > 0) {
+            saldo += valor
+        } else {
+            println("Valor de depósito inválido.")
+        }
+    }
+
+    fun sacar(valor: Double): Boolean {
+        return if (valor > 0 && saldo >= valor) {
+            saldo -= valor
+            true
+        } else {
+            println("Saldo insuficiente ou valor de saque inválido.")
+            false
+        }
+    }
+
+    fun imprimirExtrato() {
+        println("Titular: $titular - Saldo: $saldo.")
+    }
+}
+
+fun main() {
+    val conta = ContaBancaria("João Silva", 1000.0)
+
+    conta.depositar(200.0)  
+    conta.sacar(150.0)      
+    conta.imprimirExtrato() 
+}
+
+
