@@ -1,0 +1,366 @@
+1.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int base, altura, área;
+printf(“ Entre com a base: ”);
+scanf(“%d”, &base);
+printf(“Entre com a altura: ”);
+scanf("%d", &altura);
+área = (base*altura)/2
+printf(“Sua área vale:  %d\n”, área);
+return 0;
+}
+—--------------------------------------------------------------------------------------------------------
+2.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int num1, num2;
+double soma, subtração, multiplicação, divisão;
+printf(“Entre com o primeiro número: ”);
+scanf(“%d”, &num1);
+printf(“Entre com o segundo número: ”);
+scanf(“%d”, &num2);
+soma = num1 + num2;
+printf(“Sua soma vale: %lf\n”, soma);
+subtração = num1 - num2;
+printf(“Sua subtração vale: %lf\n”, subtração);
+multiplicação = num1*num2;
+printf(“Sua multiplicação vale: %lf\n”, multiplicação);
+divisão = num1/num2;
+printf(“Sua divisão vale: %lf\n”, divisão);
+return 0;
+}
+—----------------------------------------------------------------------------
+3.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int nome, salario, vendas, salarioFinal;
+printf(“Entre com o nome: ”);
+scanf(“%s”, &nome);
+printf(“Entre com o salário fixo: ”);
+scanf(“%d”, &salario);
+printf(“Entre com as vendas(em dinheiro): “);
+scanf(“%d”, &vendas);
+salarioFinal = salario+(0.2*vendas);
+printf(“Nome é: %s\n “, nome);
+printf(“Seu salário fixo é: %d\n”, salario);
+printf(“Seu salário final é: %d\n”, salarioFinal);
+return 0;
+}
+—------------------------------------------------------------------------------------------------------------
+4.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int nome, P1, P2, P3, Média;
+printf(“Entre com o nome: ”);
+scanf(“%s”, &nome);
+printf(“Entre com a P1: ”);
+scanf(“%d”, &P1);
+printf(“Entre com a P2: ”);
+scanf(“%d”, &P2);
+printf(“Entre com a P3: ”);
+scanf(“%d”, &P3);
+Média = ((P1*2)+(P2*4)+(P3*6))/12;
+printf(“Nome é: %s\n”, &nome);
+printf(“Sua média é: %d\n”, Média);
+return 0;
+}
+—-------------------------------------------------------------------------------------------------------------
+5.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int N1, N2, maior;
+printf(“Entre com o primeiro número:”);
+scanf(“%d”, &N1);
+printf(“Entre com o segundo número:”);
+scanf(“%d”, &N2);
+if(N1 == N2) {
+printf(“Os valores são iguais”);
+return 1;
+}
+if(N1 >= N2)
+maior = N1;
+else maior = N2;
+printf(“Maior = %d”, maior);
+return 0;
+}
+—-----------------------------------------------------------------------------------------------
+6.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int N;
+printf(“Entre com o número: “);
+scanf(“%d”, &N);
+if(N>=200 & N <= 300)
+printf(“O valor está dentro do intervalo”);
+else printf(“O valor não está dentro do intervalo”);
+return 0;
+}
+—--------------------------------------------------------------------------------------------
+7.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+double cópias, total;
+printf(“Entre com o total de cópias:”);
+scanf(“%lf”, &cópias);
+if(cópias <=200)
+total = 0.5*cópias;
+else total = 0.3*cópias;
+printf(“Total de cópias = %d\n”, total);
+return 0;
+}
+—-----------------------------------------------------------------------------------------------------
+8.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int idade;
+printf(“Entre com a idade:”);
+scanf(“%d”, &idade);
+if(idade <= 13)
+printf(“Infantil”);
+else if(idade <= 17)
+printf(“Juvenil”);
+else if(idade >= 18)
+printf(“Sênior”);
+return 0;
+}
+—--------------------------------------------------------------------------------------------------------
+9.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int N1, N2
+printf(“Entre com N1:”);
+scanf(“%d”, &N1);
+printf(“Entre com N2:”);
+scanf(“%d”, &N2);
+if(N1 >= N2)
+printf(“%d é maior que %d”, N1, N2);
+else
+printf(“%d é maior que %d”, N2, N1);
+return 0;
+}
+—------------------------------------------------------------------------------------------------------
+10.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int N1, N2, N3, média;
+printf(“Entre com N1: “);
+scanf(“%d”, &N1);
+printf(“Entre com N2: “);
+scanf(“%d”, &N2);
+printf(“Entre com N3: “);
+scanf(“%d”, &N3);
+média = (N1 + N2 + N3)/3;
+printf(“média = %d\n”, média);
+return 0;
+}
+—----------------------------------------------------------------------------------------------------------
+11.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int N1;
+printf(‘Entre com N1: “);
+‘
+}
+scanf(“%d”, &N1);
+if(N1%2 == 0)
+printf(“O número é Par”);
+else printf( “O número é impar”);
+return 0;
+—-------------------------------------------------------------------------------------------------------------
+12.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int nome, N1, N2, N3, Média;
+printf(“Entre com o nome: ”);
+scanf(“%s”, &nome);
+printf(“Entre com a N1: ”);
+scanf(“%d”, &N1);
+printf(“Entre com a N2: ”);
+scanf(“%d”, &N2);
+printf(“Entre com a N3: ”);
+scanf(“%d”, &N3);
+printf ( “Nome é = %s\n”, &Nome);
+Média = (N1+N2+N3)/3;
+printf(“Média é = %d\n”, Média);
+return 0;
+}
+—-------------------------------------------------------------------------------------------------------------
+13.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int N1;
+printf(“Entre com N1: “);
+scanf(“%d”, &N1);
+if(N1>=100 && N1<=200)
+printf(“Está dentro do intervalo”);
+else printf(“Não está dentro do intervalo”);
+return 0;
+}
+—------------------------------------------------------------------------------------------------------------
+14.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int C, F;
+printf(“Entre com temperatura em Celsius: “);
+‘
+scanf(“%d”, &C);
+F = (9*C+160)/5;
+printf(“A temperatura em Fahrenheit é %d\n”, F);
+return 0;
+—-------------------------------------------------------------------------------------------------------------
+15.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int C, F;
+printf(“Entre com temperatura em Fahrenheit: “);
+‘
+scanf(“%d”, &F);
+C = ((F-32)*5)/9;
+printf(“A temperatura em Celsius é %d\”,  C);
+return 0;
+—-------------------------------------------------------------------------------------------------------------
+16.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int A,  B, C;
+printf(“Entre com o Valor A: ”);
+scanf(“%d”, &A);
+printf(“Entre com o Valor B: ”);
+scanf(“%d”, &B);
+printf(“Entre com o Valor C ”);
+scanf(“%d”, &C);
+if(A>B && A>C)
+printf( “%d é o maior número\n”, A);
+else if (A<B && A>C || A>B && A<C)
+printf(“%d é o segundo maior número\n”, A);
+else if (A<B && A<C)
+printf (“%d é o menor número\n”, A);
+if(B>A && B>C)
+printf( “%d é o maior número\n”, B);
+else if (B<A && B>C || B>A && B<C)
+printf(“%d é o segundo maior número\n”, B);
+else if (B<A && B<C)
+printf (“%d é o menor número\n”, B);
+if(C>B && C>A)
+printf( “%d é o maior número\n”, C);
+else if (C<B && C>A || C>B && A<C)
+printf(“%d é o segundo maior número\n”, C);
+else if (C<A && C<B)
+printf (“%d é o menor número\n”, C);
+return 0;
+}
+—-------------------------------------------------------------------------------------------------------------
+17.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int N1, N2, N3, N4, Média;
+printf(“Entre com a N1: ”);
+scanf(“%d”, &N1);
+printf(“Entre com a N2: ”);
+scanf(“%d”, &N2);
+printf(“Entre com a N3: ”);
+scanf(“%d”, &N3);
+printf(“Entre com a N4: ”);
+scanf(“%d”, &N4);
+Média = (N1+N2+N3+N4)/4;
+if(Média>=5)
+printf(“Aprovado\n”);
+else printf(“Reprovado\n”);
+printf(“Média é = %d\n”, Média);
+return 0;
+}
+—-------------------------------------------------------------------------------------------------------------
+18.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int N1, N2, Diferença;
+printf(“Entre com a N1: ”);
+scanf(“%d”, &N1);
+printf(“Entre com a N2: ”);
+scanf(“%d”, &N2);
+if(N1>N2)
+Diferença = N1 - N2;
+else Diferença = N2 - N1;
+printf(“Diferença entre os números é: %d\n”, Diferença”);
+return 0;
+}
+—-------------------------------------------------------------------------------------------------------------
+19.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int i = 1;
+for ( i=1; i<=10; i++)
+printf(“Número %d\n”, 1);
+return 0;
+}
+—-------------------------------------------------------------------------------------------------------------
+20.
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+setlocale(LC_ALL, “Portuguese”);
+int i = 100;
+for (i = 100; i>=1; –i)
+printf(“Número %d\n”, i);
+return 0;
+}
+—-------------------------------------------------------------------------------------------------------------
